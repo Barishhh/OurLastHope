@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.danielkim.soundrecorder.R;
 import com.danielkim.soundrecorder.RecordingService;
 import com.melnykov.fab.FloatingActionButton;
+import com.pascalwelsch.holocircularprogressbar.HoloCircularProgressBar;
 
 import java.io.File;
 
