@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- remove action bar, using toolbar -->
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
@@ -39,5 +39,4 @@
         <item name="android:windowEnterTransition">@android:transition/explode</item>
         <item name="android:windowExitTransition">@android:transition/explode</item>
     </style>
-
 </resources>
