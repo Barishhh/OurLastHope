@@ -47,41 +47,7 @@ public class MainActivity extends ActionBarActivity{
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
-        Button button;
 
-        public void onClick(View v) {
-
-            Drawable dr = getResources().getDrawable(R.drawable.mes);
-            dr.setColorFilter(Color.parseColor("#FF0000"), PorterDuff.Mode.SRC_ATOP);
-
-            switch (v.getId()) {
-                case R.id.button3:
-
-                    if (button == null) {
-                        button = (Button) findViewById(v.getId());
-                    } else {
-                        button.setBack(R.drawable.location);
-                        button = (Button) findViewById(v.getId());
-                    }
-                    button.setBackgroundDrawable(dr);
-
-                    break;
-
-                case R.id.button4:
-                    if (button == null) {
-                        button = (Button) findViewById(v.getId());
-                    } else {
-                        button.setBackgroundResource(R.drawable.time);
-                        button = (Button) findViewById(v.getId());
-                    }
-                    button.setBackgroundDrawable(dr);
-
-                    break;
-
-                default:
-                    break;
-            }
-        }
     }
 
     @Override
