@@ -42,7 +42,6 @@ public class RecordFragment extends Fragment {
     private int mRecordPromptCount = 0;
 
     private boolean mStartRecording = true;
-    private boolean mPauseRecording = true;
 
     private Chronometer mChronometer = null;
     long timeWhenPaused = 0; //stores time when user clicks pause button
