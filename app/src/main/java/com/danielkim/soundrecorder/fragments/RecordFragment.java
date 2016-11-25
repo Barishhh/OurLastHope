@@ -91,16 +91,6 @@ public class RecordFragment extends Fragment {
             }
         });
 
-        mPauseButton = (Button) recordView.findViewById(R.id.btnPause);
-        mPauseButton.setVisibility(View.GONE); //hide pause button before recording starts
-        mPauseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onPauseRecord(mPauseRecording);
-                mPauseRecording = !mPauseRecording;
-            }
-        });
-
         return recordView;
     }
 
