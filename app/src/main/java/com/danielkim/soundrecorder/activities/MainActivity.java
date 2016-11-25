@@ -1,5 +1,7 @@
 package com.danielkim.soundrecorder.activities;
 
+
+import android.support.v7.app.ActionBarActivity;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -24,7 +26,7 @@ import com.danielkim.soundrecorder.fragments.RecordFragment;
 import static android.R.attr.button;
 
 
-public class MainActivity extends ActionBarActivity{
+public class MainActivity extends ActionBarActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
@@ -47,7 +49,7 @@ public class MainActivity extends ActionBarActivity{
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
-        
+
 
     }
 
