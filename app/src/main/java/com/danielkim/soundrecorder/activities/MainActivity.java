@@ -30,8 +30,8 @@ public class MainActivity extends ActionBarActivity{
 
     private PagerSlidingTabStrip tabs;
     private ViewPager pager;
+    Button b3;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
@@ -47,8 +47,11 @@ public class MainActivity extends ActionBarActivity{
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
+        
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -71,6 +74,10 @@ public class MainActivity extends ActionBarActivity{
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
+
+
 
     public void openLicenses(){
         LicensesFragment licensesFragment = new LicensesFragment();
