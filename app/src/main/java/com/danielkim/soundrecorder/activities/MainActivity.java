@@ -1,5 +1,8 @@
 package com.danielkim.soundrecorder.activities;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,12 +12,16 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.danielkim.soundrecorder.R;
 import com.danielkim.soundrecorder.fragments.FileViewerFragment;
 import com.danielkim.soundrecorder.fragments.LicensesFragment;
 import com.danielkim.soundrecorder.fragments.RecordFragment;
+
+import static android.R.attr.button;
 
 
 public class MainActivity extends ActionBarActivity{
@@ -39,6 +46,41 @@ public class MainActivity extends ActionBarActivity{
         toolbar.setPopupTheme(R.style.ThemeOverlay_AppCompat_Light);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
+        }
+        Button button;
+
+        public void onClick(View v) {
+
+            Drawable dr = getResources().getDrawable(R.drawable.mes);
+            dr.setColorFilter(Color.parseColor("#FF0000"), PorterDuff.Mode.SRC_ATOP);
+
+            switch (v.getId()) {
+                case R.id.button3:
+
+                    if (button == null) {
+                        button = (Button) findViewById(v.getId());
+                    } else {
+                        button.setBack(R.drawable.location);
+                        button = (Button) findViewById(v.getId());
+                    }
+                    button.setBackgroundDrawable(dr);
+
+                    break;
+
+                case R.id.button4:
+                    if (button == null) {
+                        button = (Button) findViewById(v.getId());
+                    } else {
+                        button.setBackgroundResource(R.drawable.time);
+                        button = (Button) findViewById(v.getId());
+                    }
+                    button.setBackgroundDrawable(dr);
+
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 
