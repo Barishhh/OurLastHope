@@ -88,6 +88,7 @@ public class RecordFragment extends Fragment {
             public void onClick(View v) {
                 onRecord(mStartRecording);
                 mStartRecording = !mStartRecording;
+                //HoloCircularProgressBar(startActivity));
             }
         });
 

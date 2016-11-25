@@ -40,4 +40,12 @@
         <item name="circularProgressBarStyle">@style/CircularProgressBar</item>
     </style>
 
+    <style name="Navbar" parent="android:Theme.Material.Light.NoActionBar" >
+        <item name="android:navigationBarColor">@color/Politieblauw</item>
+    </style>
+
+    <style name="politieblauwnav" parent="android:Theme.Material.Light.NoActionBar" >
+        <item name="android:navigationBarColor">@color/Politieblauw</item>
+    </style>
+
 </resources>
