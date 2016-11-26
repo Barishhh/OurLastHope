@@ -77,10 +77,6 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-
-
-
-
     public void openLicenses(){
         LicensesFragment licensesFragment = new LicensesFragment();
         licensesFragment.show(getSupportFragmentManager().beginTransaction(), "dialog_licenses");

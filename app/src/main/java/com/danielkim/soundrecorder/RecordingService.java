@@ -1,16 +1,21 @@
 package com.danielkim.soundrecorder;
 
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioFormat;
+import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.danielkim.soundrecorder.activities.MainActivity;
@@ -22,26 +27,31 @@ import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static android.R.attr.data;
+import static java.lang.Math.log10;
+
 /**
  * Created by Daniel on 12/28/2014.
  */
 public class RecordingService extends Service {
+    private static final int sampleRate = 8000;
+    private AudioRecord audio;
+    private int bufferSize;
+    private double lastLevel = 0;
+    private Thread thread;
+    private static final int SAMPLE_DELAY = 75;
+
 
     private static final String LOG_TAG = "RecordingService";
-
     private String mFileName = null;
     private String mFilePath = null;
-
-    private MediaRecorder mRecorder = null;
-
+    public MediaRecorder mRecorder = null;
     private DBHelper mDatabase;
-
     private long mStartingTimeMillis = 0;
     private long mElapsedMillis = 0;
     private int mElapsedSeconds = 0;
     private OnTimerChangedListener onTimerChangedListener = null;
     private static final SimpleDateFormat mTimerFormat = new SimpleDateFormat("mm:ss", Locale.getDefault());
-
     private Timer mTimer = null;
     private TimerTask mIncrementTimerTask = null;
 
@@ -60,9 +70,12 @@ public class RecordingService extends Service {
         mDatabase = new DBHelper(getApplicationContext());
     }
 
+
+
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         startRecording();
+
         return START_STICKY;
     }
 
@@ -90,10 +103,8 @@ public class RecordingService extends Service {
             mRecorder.prepare();
             mRecorder.start();
             mStartingTimeMillis = System.currentTimeMillis();
-
             //startTimer();
             //startForeground(1, createNotification());
-
         } catch (IOException e) {
             Log.e(LOG_TAG, "prepare() failed");
         }

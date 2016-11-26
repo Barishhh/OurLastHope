@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.danielkim.soundrecorder.R;
 import com.danielkim.soundrecorder.RecordingService;
+import com.danielkim.soundrecorder.activities.MainActivity;
 import com.melnykov.fab.FloatingActionButton;
 
 import java.io.File;
@@ -122,10 +123,10 @@ public class RecordFragment extends Fragment {
             //start Chronometer
             mChronometer.setBase(SystemClock.elapsedRealtime());
             mChronometer.start();
-            mChronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+            /*mChronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
                 @Override
                 public void onChronometerTick(Chronometer chronometer) {
-                    if (mRecordPromptCount == 0) {
+                    if (mRecordPromptCount == 0){
                         mRecordingPrompt.setText(getString(R.string.record_in_progress) + ".");
                     } else if (mRecordPromptCount == 1) {
                         mRecordingPrompt.setText(getString(R.string.record_in_progress) + "..");
@@ -136,7 +137,7 @@ public class RecordFragment extends Fragment {
 
                     mRecordPromptCount++;
                 }
-            });
+            }); */
 
             //start RecordingService
             getActivity().startService(intent);
