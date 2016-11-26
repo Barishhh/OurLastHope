@@ -6,7 +6,8 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/Politieblauw" >
+    android:background="@color/Politieblauw"
+    android:gravity="bottom">
 
     <com.melnykov.fab.FloatingActionButton
         android:id="@+id/btnRecord"
@@ -19,65 +20,15 @@
         android:src="@drawable/ic_mic_white_36dp"
         android:layout_alignBottom="@+id/recordProgressBar" />
 
-    <Button
-        android:layout_width="70dp"
-        android:layout_height="90dp"
-        android:id="@+id/NN"
-        android:background="@android:drawable/ic_menu_myplaces"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/NN"
-        android:layout_toLeftOf="@+id/recording_status_text"
-        android:layout_toStartOf="@+id/recording_status_text"
-        android:layout_marginTop="46dp"
-        android:id="@+id/button3" />
-
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/tijd"
-        android:background="@android:drawable/ic_menu_recent_history"
-        android:layout_above="@+id/locatie"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="12dp" />
-
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/locatie"
-        android:background="@android:drawable/ic_dialog_map"
-        android:layout_alignTop="@+id/NN"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="44dp" />
-
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/object"
-        android:background="@drawable/mes"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="14dp"
-        android:layout_marginEnd="14dp" />
-
     <Chronometer
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/chronometer"
         android:textSize="60sp"
         android:fontFamily="sans-serif-light"
-        android:layout_marginBottom="30dp"
         tools:textColor="@color/white"
-        android:layout_above="@+id/tijd"
+        android:layout_marginBottom="60dp"
+        android:layout_alignBottom="@+id/recordProgressBar"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -90,19 +41,7 @@
         android:textColor="#FFFFFF"
         android:fontFamily="sans-serif-condensed"
         android:layout_above="@+id/btnRecord"
-        android:layout_toLeftOf="@+id/object"
-        android:layout_toStartOf="@+id/object" />
-
-    <Button
-        android:layout_height="60dp"
-        android:id="@+id/uitroepteken"
-        android:background="@android:drawable/stat_sys_warning"
-        android:layout_width="60dp"
-        android:layout_above="@+id/tijd"
-        android:layout_alignLeft="@+id/object"
-        android:layout_alignStart="@+id/object"
-        android:layout_marginLeft="6dp"
-        android:layout_marginStart="6dp" />
+        android:layout_centerHorizontal="true" />
 
     <ProgressBar
         style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
@@ -114,8 +53,59 @@
         android:indeterminate="false"
         android:max="100"
         android:progress="50"
-        android:layout_marginBottom="23dp"
-        android:layout_alignBottom="@+id/tijd"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_alignParentStart="true"
+        android:layout_toRightOf="@+id/btnRecord" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="90dp"
+        android:id="@+id/NN"
+        android:background="@android:drawable/ic_menu_myplaces"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/recordProgressBar"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/object"
+        android:background="@drawable/mes"
+        android:layout_alignTop="@+id/locatie"
+        android:layout_alignEnd="@+id/recordProgressBar"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/locatie"
+        android:background="@android:drawable/ic_dialog_map"
+        android:layout_marginBottom="22dp"
+        android:layout_above="@+id/recording_status_text"
+        android:layout_toEndOf="@+id/object" />
+
+    <Button
+        android:layout_height="60dp"
+        android:id="@+id/uitroepteken"
+        android:background="@android:drawable/stat_sys_warning"
+        android:layout_width="60dp"
+        android:layout_above="@+id/locatie"
+        android:layout_toEndOf="@+id/object" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/tijd"
+        android:background="@android:drawable/ic_menu_recent_history"
+        android:layout_above="@+id/object"
+        android:layout_toStartOf="@+id/uitroepteken" />
 
 </RelativeLayout>

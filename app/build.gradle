@@ -28,6 +28,4 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:21.0.+'
     compile 'com.melnykov:floatingactionbutton:1.1.0'
     compile 'com.jpardogo.materialtabstrip:library:1.0.6'
-    compile project(':libs:library')
-    compile 'com.google.android.gms:play-services-maps:10.0.0'
 }

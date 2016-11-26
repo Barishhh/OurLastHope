@@ -37,7 +37,6 @@
         <!-- specify enter and exit transitions -->
         <item name="android:windowEnterTransition">@android:transition/explode</item>
         <item name="android:windowExitTransition">@android:transition/explode</item>
-        <item name="circularProgressBarStyle">@style/CircularProgressBar</item>
     </style>
 
     <style name="Navbar" parent="android:Theme.Material.Light.NoActionBar" >

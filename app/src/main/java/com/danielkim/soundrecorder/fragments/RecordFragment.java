@@ -17,7 +17,6 @@ import android.widget.Toast;
 import com.danielkim.soundrecorder.R;
 import com.danielkim.soundrecorder.RecordingService;
 import com.melnykov.fab.FloatingActionButton;
-import com.pascalwelsch.holocircularprogressbar.HoloCircularProgressBar;
 
 import java.io.File;
 
@@ -79,6 +78,7 @@ public class RecordFragment extends Fragment {
         mChronometer = (Chronometer) recordView.findViewById(R.id.chronometer);
         //update recording prompt text
         mRecordingPrompt = (TextView) recordView.findViewById(R.id.recording_status_text);
+
 
         mRecordButton = (FloatingActionButton) recordView.findViewById(R.id.btnRecord);
         mRecordButton.setColorNormal(getResources().getColor(R.color.primary));
