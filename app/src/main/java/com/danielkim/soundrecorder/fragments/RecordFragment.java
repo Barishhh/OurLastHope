@@ -1,5 +1,6 @@
 package com.danielkim.soundrecorder.fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +29,7 @@ import java.io.File;
  * Use the {@link RecordFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class RecordFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_POSITION = "position";
@@ -87,8 +90,10 @@ public class RecordFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 onRecord(mStartRecording);
+
+
                 mStartRecording = !mStartRecording;
-                //HoloCircularProgressBar(startActivity));
+
             }
         });
 
@@ -104,7 +109,10 @@ public class RecordFragment extends Fragment {
             // start recording
             mRecordButton.setImageResource(R.drawable.ic_media_stop);
             //mPauseButton.setVisibility(View.VISIBLE);
+
+            Toast.makeText(getActivity(),"Let op: mededeling van opname aan persoon",Toast.LENGTH_SHORT).show();
             Toast.makeText(getActivity(),R.string.toast_recording_start,Toast.LENGTH_SHORT).show();
+
             File folder = new File(Environment.getExternalStorageDirectory() + "/SoundRecorder");
             if (!folder.exists()) {
                 //folder /SoundRecorder doesn't exist, create the folder
@@ -153,7 +161,6 @@ public class RecordFragment extends Fragment {
         }
     }
 
-    //TODO: implement pause recording
     private void onPauseRecord(boolean pause) {
         if (pause) {
             //pause recording

@@ -30,7 +30,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="7dp"
                 android:layout_marginBottom="7dp"
-                android:text="file_name.mp4"
+                android:text="file_name.mp3"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-condensed"/>
 
@@ -75,21 +75,163 @@
                     android:layout_below="@+id/file_length_text_view"
                     android:layout_centerHorizontal="true" />
 
-            </RelativeLayout>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/fab_play"
+                    android:layout_alignParentStart="true">
 
-            <TextView
-                android:text="N.N aantal"
-                android:layout_width="93dp"
-                android:gravity="left"
-                android:layout_height="wrap_content"
-                android:id="@+id/nnaantal" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:text=" Tijdstip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/TextView242"
+                            android:elevation="0dp"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+
+                        <TextView
+                            android:text="  #"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView13"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:text=" 05:56"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView17"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+
+                        <TextView
+                            android:text="  Locatie 1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView18"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:text=" 13:37"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView14"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+
+                        <TextView
+                            android:text="  Voorwerp 1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView15"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:text=" 20:03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView21"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+
+                        <TextView
+                            android:text="  Tijdstip 1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView20"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:text=" 23:01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView22"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+
+                        <TextView
+                            android:text="  Voorwerp 2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView23"
+                            android:textStyle="normal|bold"
+                            android:textColor="?android:textColorTertiary" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView9" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:text=" N.N aantal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView8"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:text="  2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView10"
+                            android:textStyle="normal|bold" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </RelativeLayout>
 
             <TextView
                 android:text="Locatie opname"
                 android:layout_width="127dp"
                 android:gravity="left"
                 android:layout_height="wrap_content"
-                android:id="@+id/Locatieopname" />
+                android:id="@+id/Locatieopname"
+                android:textStyle="normal|bold" />
 
             <ImageView
                 android:layout_width="wrap_content"
