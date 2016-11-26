@@ -278,4 +278,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView3" />
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chronometer"
+        android:layout_alignParentStart="true"
+        android:id="@+id/kaartview" />
+
 </RelativeLayout>

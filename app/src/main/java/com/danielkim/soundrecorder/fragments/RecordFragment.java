@@ -148,12 +148,14 @@ public class RecordFragment extends Fragment {
 
         } else {
             //stop recording
+
             mRecordButton.setImageResource(R.drawable.ic_mic_white_36dp);
             //mPauseButton.setVisibility(View.GONE);
             mChronometer.stop();
             mChronometer.setBase(SystemClock.elapsedRealtime());
             timeWhenPaused = 0;
-            mRecordingPrompt.setText(getString(R.string.record_prompt));
+
+            mRecordingPrompt.setText("Opname gestopt");
 
             getActivity().stopService(intent);
             //allow the screen to turn off again once recording is finished
